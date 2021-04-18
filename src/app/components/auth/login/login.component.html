@@ -1,0 +1,38 @@
+<div class="background">
+    <div class="h-100 div text-center">
+        <form
+          class="form-signin animated fadeIn"
+          autocomplete="off"
+          [formGroup]="loginForm"
+          (ngSubmit)="login()"
+        >
+          <img class="img" src="assets/logo.png" alt="logo" />
+          <h2 class="mb-3 font-weight-normal text-light">Sign in</h2>
+          <label class="sr-only text-light" for="inputEmail">Email Address</label>
+          <input
+            type="email"
+            class="form-control mb-3"
+            id="inputEmail"
+            placeholder="Email Address"
+            formControlName="email"
+            [class.is-invalid]="emailValidate"
+          />
+          <label class="sr-only text-light" for="inputPassword">Password</label>
+          <input
+            type="password"
+            class="form-control mb-3"
+            id="inputPassword"
+            placeholder="Password"
+            formControlName="password"
+            [class.is-invalid]="passwordValidate"
+          />
+          <button type="submit" class="btn btn-lg btn-primary mb-2">
+            Sign in
+          </button>
+          <p></p>
+          <a class="fs-5" [routerLink]="['/registro']">Don't you have an account?</a>
+          <p class="mt-4 mb-3 text-muted">© Escuadron Z - 2021</p>
+        </form>
+    </div>    
+    <img class="mb-4 img2 d-none d-xxl-block" src="assets/fondo.png" alt="fondo"/>
+</div>

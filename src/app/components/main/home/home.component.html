@@ -1,0 +1,25 @@
+<div *ngFor="let temp of temperatura">
+    <label style="float: right;"> Temperatura: {{temp.valor}}°C </label>
+    <table>
+        <tr>
+            <td> <button type="submit" class="btn btn-lg btn-primary btn-block mb-2" [routerLink]="['/pendientes']"> Pendientes </button> </td>
+            <td> ... </td>
+        </tr>
+        <tr>
+            <td> <button type="submit" class="btn btn-lg btn-primary btn-block mb-2" [routerLink]="['/plantas']"> Plantas </button> </td>
+            <td> ... </td>
+        </tr>
+        <tr>
+            <td> <button type="submit" class="btn btn-lg btn-primary btn-block mb-2" [routerLink]="['/iluminacion']"> Iluminación </button> </td>
+            <td> ... </td>
+        </tr>
+        <tr>
+            <td> <button type="submit" class="btn btn-lg btn-primary btn-block mb-2" [routerLink]="['/recetas']"> Recetas </button> </td>
+            <td> ... </td>
+        </tr>
+        <tr>
+            <td> <button type="submit" class="btn btn-lg btn-primary btn-block mb-2" [routerLink]="['/espacios']"> Control de Espacios </button> </td>
+            <td> ... </td>
+        </tr>
+    </table>
+</div>

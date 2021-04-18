@@ -1,0 +1,13 @@
+<div *ngFor="let led of leds">
+    <table>
+        <tr>
+            <th> Foco </th>
+            <th> Estado </th>
+        </tr>
+        <tr>
+            <td> {{led.nombre}} </td>
+            <td> <button class="btn btn-lg btn-primary btn-block mb-2" (click)="cambiaEstado(led._id, '1')"> Encender </button> </td>
+            <td> <button class="btn btn-lg btn-primary btn-block mb-2" (click)="cambiaEstado(led._id, '0')"> Apagar </button> </td>
+        </tr>
+    </table>
+</div>

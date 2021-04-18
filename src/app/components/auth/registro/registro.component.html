@@ -1,0 +1,57 @@
+<div class="background">
+    <div class="h-100 div text-center">
+    <form
+      class="form-signin animated fadeIn"
+      autocomplete="off"
+      [formGroup]="registroForm"
+      (ngSubmit)="registro()"
+    >
+      <img class="mb-4 img" src="assets/logo.png" alt="logo" />
+      <h2 class="mb-3 font-weight-normal text-light">Sign up</h2>
+  
+      <div>
+        <label class="sr-only text-light" for="inputEmail">Email Address</label>
+        <input
+        type="email"
+        class="form-control mb-2"
+        id="inputEmail"
+        placeholder="Email Address"
+        formControlName="email"
+        [class.is-invalid]="emailValidate"
+        />
+        <div class="invalid-feedback">Email inválido. Ej: ejemplo@gmail.com</div>
+      </div>
+      <div>
+        <label class="sr-only text-light" for="inputPassword">Password</label>
+        <input
+          type="password"
+          class="form-control mb-2"
+          id="inputPassword"
+          placeholder="Password"
+          formControlName="password"
+          [class.is-invalid]="passwordValidate"
+        />
+      </div>
+      <div>
+        <label class="sr-only text-light" for="inputPassword2">Confirm Password</label>
+        <input
+          type="password"
+          class="form-control mb-2"
+          id="inputPassword2"
+          placeholder="Confirm Password"
+          formControlName="password2"
+          [class.is-invalid]="password2Validate"
+        />
+        <div class="invalid-feedback">La contraseña no coincide con la anterior</div>
+      </div> <br>
+    
+      <button type="submit" class="btn btn-lg btn-success btn-block mb-2" [disabled]="password2Validate || emailValidate">
+        Sign up
+      </button>
+      <br>
+      <a class="fs-5" [routerLink]="['/login']">Do you have an account?</a>
+      <p class="mt-4 mb-3 text-muted">© Escuadron Z - 2021</p>
+    </form>
+  </div>
+  <img class="mb-4 img2 d-none d-xxl-block" src="assets/fondo.png" alt="fondo"/>
+</div>

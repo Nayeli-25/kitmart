@@ -1,0 +1,9 @@
+<div *ngFor="let hum of humedad">
+    <img class="mb-4 img" src="http://principia.io/media/uploads/images/colegio-domus/cover-plantas.jpg" alt="planta" />
+    <p>La humedad de tus plantas es: {{hum.valor}}</p>
+    <p *ngIf="(hum.valor<=30)">Tus plantas se encuentran bien.</p>
+    <p *ngIf="(hum.valor>30)">Tus plantas necesitan agua.</p>
+    <button class="btn btn-lg btn-primary btn-block mb-2">
+        <a href="https://www.verdeesvida.es/" target="_blank"> Más sobre plantas </a>  
+    </button>
+</div>

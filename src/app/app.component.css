@@ -1,0 +1,15 @@
+.myNav {
+    background: tan;
+  }
+.fondo { 
+    background-color: rgba(211, 191, 166, 0.315);
+    opacity: 0.8;
+  }
+.img{
+    width:70px;
+    height: 40px;
+}
+.img2{
+    width:24px;
+    height:28px;
+}
